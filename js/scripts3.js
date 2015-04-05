@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
     $("ul#user").find(".del").first().click(function() {
       $(this).parent().remove();
     });
-    $("ul#compy").children("li").first().click(function() {
+    $("ul#compy").find(".del").first().click(function() {
       $(this).parent().remove();
     })
   });
@@ -24,11 +24,11 @@ jQuery(document).ready(function() {
   $("button#stop").click(function() {
     $("ul#user").prepend("<li><span class='del'>x </span> Stop copying me!</li>");
     $("ul#compy").prepend("<li><span class='del'>x </span> What?</li>");
-    $("ul#user").children("li").first().click(function() {
-      $(this).parent.remove();
+    $("ul#user").find(".del").first().click(function() {
+      $(this).parent().remove();
     });
-    $("ul#compy").children("li").first().click(function() {
-      $(this).parent.remove();
+    $("ul#compy").find(".del").first().click(function() {
+      $(this).parent().remove();
     });
   });
 });
